@@ -39,7 +39,7 @@ export function handleAddTodo (todo, cb) {
 
 export function handleToggleTodo (id) {
   return (dispatch) => {
-    dispatch(toggleTodoAction(id)) //optimistic update
+    dispatch(toggleTodo(id)) //optimistic update
 
     return API.saveTodoToggle(id)
       .catch(() => {

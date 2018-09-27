@@ -2,11 +2,15 @@ import {
   ADD_TODO,
   REMOVE_TODO,
   TOGGLE_TODO,
-  RECEIVE_DATA,
 } from '../actions/todos'
 
+import {
+  RECEIVE_DATA,
+} from '../actions/shared'
+
+
 //this is a reducer and must be a pure function
-function todos(state = [], action) {
+export default function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return state.concat([action.todo])

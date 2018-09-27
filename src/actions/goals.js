@@ -21,7 +21,7 @@ export function handleAddGoal (name, cb) {
   return (dispatch) => {
     return API.saveGoal(name)
       .then((goal) => {
-        dispatch(addGoalAction(goal)),
+        dispatch(addGoal(goal))
         cb()
       })
       .catch(() => alert('There was an error. Try again.'))

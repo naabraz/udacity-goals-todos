@@ -12,8 +12,6 @@ class App extends React.Component {
     const { dispatch } = this.props
 
     dispatch(handleInitialData())
-
-    store.subscribe(() => this.forceUpdate()) //re-render when state changes
   }
 
   render() {
