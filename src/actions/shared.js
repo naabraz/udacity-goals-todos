@@ -10,7 +10,6 @@ function receiveData (todos, goals) {
   }
 }
 
-//async action
 export function handleInitialData () {
   return (dispatch) => {
     Promise.all([

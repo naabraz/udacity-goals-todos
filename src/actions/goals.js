@@ -2,7 +2,6 @@ import API from 'goals-todos-api'
 
 export const ADD_GOAL = 'ADD_GOAL'
 export const REMOVE_GOAL = 'REMOVE_GOAL'
-export const TOGGLE_GOAL = 'TOGGLE_GOAL'
 
 function addGoal (goal) {
   return {
@@ -18,7 +17,6 @@ function removeGoal (id) {
   }
 }
 
-//async action
 export function handleAddGoal (name, cb) {
   return (dispatch) => {
     return API.saveGoal(name)
@@ -32,11 +30,11 @@ export function handleAddGoal (name, cb) {
 
 export function handleDeleteGoal (goal) {
   return (dispatch) => {
-    dispatch(removeGoal(goal.id)) //optimistic update
+    dispatch(removeGoal(goal.id))
 
     return API.deleteGoal(goal.id)
       .catch(() => {
-        dispatch(addGoal(goal)) //if it fails, add goal item back
+        dispatch(addGoal(goal))
         alert('An error occurred. Try again.')
     })
   }

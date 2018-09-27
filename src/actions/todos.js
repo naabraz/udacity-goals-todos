@@ -51,11 +51,11 @@ export function handleToggleTodo (id) {
 
 export function handleDeleteTodo (todo) {
   return (dispatch) => {
-    dispatch(removeTodo(todo.id)) //optimistic update
+    dispatch(removeTodo(todo.id))
 
     return API.deleteTodo(todo.id)
       .catch(() => {
-        dispatch(addTodo(todo)) //if it fails, add todo item back
+        dispatch(addTodo(todo))
         alert('An error occurred. Try again.')
       })
     }
