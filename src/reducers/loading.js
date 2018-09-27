@@ -1,5 +1,5 @@
 import {
-  RECEIVE_DATA
+  RECEIVE_DATA,
 } from '../actions/shared'
 
 export default function loading(state = true, action) {

@@ -1,6 +1,6 @@
 import {
   ADD_GOAL,
-  REMOVE_GOAL
+  REMOVE_GOAL,
 } from '../actions/goals'
 
 export default function goals(state = [], action) {

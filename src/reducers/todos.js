@@ -2,7 +2,7 @@ import {
   ADD_TODO,
   REMOVE_TODO,
   TOGGLE_TODO,
-  RECEIVE_DATA
+  RECEIVE_DATA,
 } from '../actions/todos'
 
 //this is a reducer and must be a pure function
